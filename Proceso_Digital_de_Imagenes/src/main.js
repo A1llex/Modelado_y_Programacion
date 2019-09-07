@@ -4,4 +4,7 @@
  * and open the template in the editor.
  */
 
+//tambien comentario
 
+// aqui sera el main pero sera tambien el controlador
+//el html servira como salida
