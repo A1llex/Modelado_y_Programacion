@@ -1,0 +1,8 @@
+{
+    "name": "Proceso_Digital_de_Imagenes",
+    "version": "1.0.0",
+    "keywords": ["util", "functional", "server", "client", "browser"],
+    "author": "Alex",
+    "contributors": [],
+    "dependencies": {}
+}
