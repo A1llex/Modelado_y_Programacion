@@ -8,6 +8,7 @@
  * Filtro que cambia los valores en el vectror RGB 
  * a lo que se haya pedido atra vez de unabandera
  * @param {int} rgb Es una bandera Para saber de que color se aplicara el filtro
+ * con 0 para Rojo  1 para Verde y 2 Para Azul
  * @param {document} img Sera la informacion de la imgen  a modificar
  * @returns {image} Sera la informacion de la imagen cambiada
  */
@@ -47,5 +48,3 @@ function filtroMosaico(tam ,img){
     
     return ctx.putImageData(imgData, 0, 0);
 };
-
-//module.exports = {filtroRGB,filtroMosaico};
