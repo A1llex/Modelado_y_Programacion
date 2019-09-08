@@ -78,6 +78,24 @@ function activarFiltroVerde(){
 
 }
 
+var tamMosaico = 1;
+filtroMosaico = document.getElementById('filtro-mosaico');
+filtroMosaico.addEventListener('click', activarFiltroMosaico);
+function activarFiltroMosaico(){
+	
+	if(!archivoSubido){
+		alert("Suba un archivo valido.");
+		return;
+	}
+	
+	do{
+    tamMosaico = window.prompt("Ingresa un numero entero mayor a 0 ", "");
+    tamMosaico = parseInt(tamMosaico);
+	}while(isNaN(tamMosaico) || tamMosaico < 1);
+	mostrarImagen();
+}
+
+
 function mostrarImagen(){
 
 	if(!archivoSubido){
@@ -99,11 +117,13 @@ function mostrarImagen(){
 			canvas.width = img.width;
 			const context = canvas.getContext('2d');
 			context.drawImage(img, 0, 0);
-			filtroRGB(banderaFiltro , canvas);
-/*
-			const imageData = context.getImageData(0, 0, canvas.width, canvas.height);
-			const data = imageData.data;
-			context.putImageData(imageData, 0 ,0);*/
+			
+			if(banderaFiltro != -1)
+				filtroRGB(banderaFiltro , canvas);
+			else 
+				filtroMosaico(tamMosaico, canvas);
+			banderaFiltro = -1;
+			tamMosaico = 1;
 			document.body.appendChild(canvas);
 		}
 
