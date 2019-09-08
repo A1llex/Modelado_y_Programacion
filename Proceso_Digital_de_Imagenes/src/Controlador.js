@@ -48,6 +48,3 @@ function validaArchivo(archivo){
 		return true;
 	return false;
 }
-
-
-module.exports = {validaArchivo,obtenerImagen};
