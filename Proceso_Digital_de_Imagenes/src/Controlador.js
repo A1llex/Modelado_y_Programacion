@@ -7,5 +7,28 @@
 
 var archivoSubido = false;
 gestorArchivo = document.getElementById("input-file");
-gestorArchivo.ondrop = function(){archivoSubido = true};
-gestorArchivo.oninput = function(){archivoSubido = true};
+gestorArchivo.ondrop = function(event){
+	obtenerImagen();
+};
+gestorArchivo.oninput = function(){
+	obtenerImagen();
+};
+
+function obtenerImagen(){
+
+	var archivo = gestorArchivo.value;
+	if(validaArchivo(archivo)){
+		alert("bien");
+	}
+	else 
+		alert("mal");
+
+}
+
+function validaArchivo(archivo){
+
+	var extPermitidas = /(\.jpg|\.jpeg|\.png|\.gif)$/i;
+	if(extPermitidas.exec(archivo))
+		return true;
+	return false;
+}
