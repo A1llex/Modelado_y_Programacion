@@ -7,7 +7,7 @@
 
 var archivoSubido = false;
 gestorArchivo = document.getElementById("input-file");
-gestorArchivo.ondrop = function(event){
+gestorArchivo.ondrop = function(){
 	obtenerImagen();
 };
 gestorArchivo.oninput = function(){
