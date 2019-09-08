@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<!--Vsta Html encargado de la entrada y salida del programa
+ @author  Alex Gerardo Fernandez Aguilar 
+ @author  Luis Erick Montes Garcia
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="main.css">
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">    
+    <body>
+    	<nav class = "padding">
+    	</nav>
+    	<section>
+    		<div class="text-center">
+    			<h1 class = "pacifico grande azul">¡Bienvenido gran artista!</h1>
+    			<p>Aquí podras darle el toque que se quiere para tu imagen, solo presiona sobre el filtro que deseas.</p>
+    		</div>	
+    		<div class="text-center file-upload-wrapper">
+ 			 	<input type="file" id="input-file" accept="image/png, image/jpeg" class="	file-upload" />
+			</div>
+    		<nav class = "padding-corto"></nav>
+			<div class="row text-center">
+			    <div class="col-md-3">
+			      <button type="button" class="btn btn-outline-secondary" id="filtro-azul">Azul</button>
+			    </div>
+			    <div class="col-md-3">
+			      <button type="button" class="btn btn-outline-secondary" id="filtro-rojo">Rojo</button>
+			    </div>
+			    <div class="col-md-3">
+			    	<button type="button" class="btn btn-outline-secondary" id="filtro-verde">Verde</button>
+			    </div>
+			    <div class="col-md-3">
+			      <button type="button" class="btn btn-outline-secondary" id="filtro-mosaico">Mosaico</button>
+			    </div>
+			 </div>
+			 
+    	</section>
+    	<script src="Controlador.js" type="text/javascript" charset="utf-8" async defer></script>
+    	<script src="Procesador_De_Imagenes.js" type="text/javascript" charset="utf-8" async defer></script>
+	</body>
+</html>
