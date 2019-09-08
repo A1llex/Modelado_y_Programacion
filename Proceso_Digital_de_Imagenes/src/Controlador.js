@@ -1,12 +1,11 @@
 /* El Controlador del Programa se encarga de la gestiond de entrada y salida
  *@author  Alex Gerardo Fernandez Aguilar 
  *@author  Luis Erick Montes Garcia 
- * La Finalidad de este programa es
+ * La Finalidad de este programa es controlar la ssalida y entrada con el modelo
  */
 
-
 var archivoSubido = false;
-gestorArchivo = document.getElementById("input-file");
+var gestorArchivo = document.getElementById("input-file");
 
 /**
  * funcion que arroja la imagen procesada
@@ -97,39 +96,30 @@ function activarFiltroMosaico(){
 
 
 function mostrarImagen(){
-
 	if(!archivoSubido){
-		alert("Suba un archivo valido.");
-		return;
+            alert("Suba un archivo valido.");
+            return;
 	}
-
 	var img = document.getElementById("output_image");
 	var file = gestorArchivo.files[0];
 	var reader = new FileReader();
-
 	reader.onloadend = function(){
-
-		const img = new Image();
-		img.onload = function(){
-			
-			canvas = document.createElement('canvas');
-			canvas.height = img.height;
-			canvas.width = img.width;
-			const context = canvas.getContext('2d');
-			context.drawImage(img, 0, 0);
-			
-			if(banderaFiltro != -1)
-				filtroRGB(banderaFiltro , canvas);
-			else 
-				filtroMosaico(tamMosaico, canvas);
-			banderaFiltro = -1;
-			tamMosaico = 1;
-			document.body.appendChild(canvas);
-		}
-
-		img.src = reader.result;
-	}
-
+            const img = new Image();
+            img.onload = function(){			
+                canvas = document.createElement('canvas');
+    		canvas.height = img.height;
+		canvas.width = img.width;
+		const context = canvas.getContext('2d');
+		context.drawImage(img, 0, 0);			
+		if(banderaFiltro !== -1)
+                    filtroRGB(banderaFiltro , canvas);
+		else 
+                    filtroMosaico(tamMosaico, canvas);
+		banderaFiltro = -1;
+		tamMosaico = 1;
+		document.body.appendChild(canvas);
+		};
+            img.src = reader.result;
+	};
 	reader.readAsDataURL(file);
-
 }
