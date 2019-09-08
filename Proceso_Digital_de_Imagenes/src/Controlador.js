@@ -33,3 +33,68 @@ function validaArchivo(archivo){
 		return true;
 	return false;
 }
+
+var banderaFiltro = -1;
+
+filtroAzul = document.getElementById('filtro-azul');
+filtroAzul.addEventListener('click', activarFiltroAzul);
+function activarFiltroAzul(){
+
+	banderaFiltro = 2;
+	mostrarImagen();
+
+}
+
+filtroRojo = document.getElementById('filtro-rojo');
+filtroRojo.addEventListener('click', activarFiltroRojo);
+function activarFiltroRojo(){
+
+	banderaFiltro = 0;
+	mostrarImagen();
+
+}
+
+filtroVerde = document.getElementById('filtro-verde');
+filtroVerde.addEventListener('click', activarFiltroVerde);
+function activarFiltroVerde(){
+
+	banderaFiltro = 1;
+	mostrarImagen();
+
+}
+
+function mostrarImagen(){
+
+	if(!archivoSubido){
+		alert("Suba un archivo valido.");
+		return;
+	}
+
+	var img = document.getElementById("output_image");
+	var file = gestorArchivo.files[0];
+	var reader = new FileReader();
+
+	reader.onloadend = function(){
+
+		const img = new Image();
+		img.onload = function(){
+			
+			canvas = document.createElement('canvas');
+			canvas.height = img.height;
+			canvas.width = img.width;
+			const context = canvas.getContext('2d');
+			context.drawImage(img, 0, 0);
+			filtroRGB(banderaFiltro , canvas);
+/*
+			const imageData = context.getImageData(0, 0, canvas.width, canvas.height);
+			const data = imageData.data;
+			context.putImageData(imageData, 0 ,0);*/
+			document.body.appendChild(canvas);
+		}
+
+		img.src = reader.result;
+	}
+
+	reader.readAsDataURL(file);
+
+}

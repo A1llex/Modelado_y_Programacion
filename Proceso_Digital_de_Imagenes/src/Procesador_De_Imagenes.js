@@ -48,4 +48,4 @@ function filtroMosaico(tam ,img){
     return ctx.putImageData(imgData, 0, 0);
 };
 
-module.exports = {filtroRGB,filtroMosaico};
+//module.exports = {filtroRGB,filtroMosaico};
