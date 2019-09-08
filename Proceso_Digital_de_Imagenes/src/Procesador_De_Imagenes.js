@@ -10,7 +10,7 @@
  * @param {document} img Sera la informacion de la imgen  a modificar (var c = document.getElementById("myCanvas");
  * @returns {image} Sera la informacion de la imagen cambiada
  */
-function filtrosRGB (rgb,img){
+function filtroRGB(rgb,img){
     var color1;
     var color2;
     if(rgb === 0){
@@ -39,6 +39,9 @@ function filtrosRGB (rgb,img){
  * @param {type} arg2
  * @returns {undefined}
  */
-function filtroMosaico (arg1,arg2){
+function filtroMosaico(arg1,arg2){
     //Body
+    return (arg1+arg2);
 };
+
+module.exports = {filtroRGB,filtroMosaico};

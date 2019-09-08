@@ -4,7 +4,8 @@
  * La Finalidad de este programa es
  */
 
-function controlador (arg1,arg2){
+function controlador (file,filtro){
+    
     //Body
     return arg1;
 };
