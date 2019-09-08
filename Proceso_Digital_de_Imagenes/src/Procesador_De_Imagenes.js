@@ -46,5 +46,10 @@ function filtroMosaico(tam ,img){
     var ctx = img.getContext("2d");
     var imgData = ctx.getImageData(0, 0, img.width, img.height);
     
+    for (var i = 0; i < imgData.data.length/2; i += 4) { 
+        imgData.data[i+1] = 0;
+        imgData.data[i+2] = 0;
+    }
     return ctx.putImageData(imgData, 0, 0);
+    
 };
