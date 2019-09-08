@@ -4,6 +4,8 @@
  * La Finalidad de este programa es
  */
 
+alert("Conexion realizada");
+
 function controlador (arg1,arg2){
     //Body
     return arg1;
