@@ -18,14 +18,14 @@ function filtroRGB(rgb,img){
     if(rgb === 0){
         color1 = 1; 
         color2 = 2;
-    }else {
-        color1 = 0; 
-    }if(rgb === 1){
+    }else if(rgb === 1){
+        color1 = 0;
         color2 = 2;
     }else if(rgb === 2) {
+        color1 = 0;
         color2 = 1;
     }else{
-        return "Error en la bandera";
+        return ;
     }
     
     var ctx = img.getContext("2d");
