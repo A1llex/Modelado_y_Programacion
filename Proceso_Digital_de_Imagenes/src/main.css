@@ -1,0 +1,17 @@
+.pacifico{
+	font-family: 'Pacifico', cursive;
+}
+.grande{
+	font-size: 4 em;
+}
+a,.azul{
+	color: #009FFF;
+}
+.inline-block{
+	float: none;
+	display: inline-block;
+	margin-right: -4px;
+}
+.padding{
+	padding: 130px 100px;
+}
