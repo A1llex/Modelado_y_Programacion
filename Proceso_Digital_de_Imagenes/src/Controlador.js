@@ -1,22 +1,17 @@
-/* 
+/* El Controlador del Programa se encarga de la gestiond de entrada y salida
  *@author  Alex Gerardo Fernandez Aguilar 
  *@author  Luis Erick Montes Garcia 
  * La Finalidad de este programa es
  */
 
+/**
+ * Funcion Controlador Diseñada para gestionar la entrad y salida
+ * @param {int} Informacion adicional de el filtro elgeido(Tamaño o color)
+ * @param {type} El Filtro elegido
+ * @returns {Dcoument} Regresara una imagen modificada
+ */
 function controlador (file,filtro){
     
     //Body
     return arg1;
 };
-
-/* con esto puede obtener del html la imagen pero falta aun
- * document.getElementById("scream").onload = function() {
-  var c = document.getElementById("myCanvas");
-  var ctx = c.getContext("2d");
-  var img = document.getElementById("scream");
-  ctx.drawImage(img, 0, 0);
-  
-  ctx.putImageData(FiltrosRGB(c), 0, 0);
-};
- */
