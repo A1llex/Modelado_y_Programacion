@@ -19,6 +19,7 @@ function obtenerImagen(){
 	var archivo = gestorArchivo.value;
 	if(validaArchivo(archivo)){
 		alert("El formato del archivo es correcto");
+		archivoSubido = true;
 	}
 	else 
 		alert("Asegurese de que el tipo de su archivo sea jpg, jpeg, png");
