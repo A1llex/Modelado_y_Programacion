@@ -22,8 +22,10 @@ function filtroRGB(rgb,img){
         color1 = 0; 
     }if(rgb === 1){
         color2 = 2;
-    }else{
+    }else if(rgb === 2) {
         color2 = 1;
+    }else{
+        return "Error en la bandera";
     }
     
     var ctx = img.getContext("2d");
@@ -38,7 +40,7 @@ function filtroRGB(rgb,img){
 /**
  * Filto que divide  la imagen  en casillas  y a cada  unas se le saca su color promedio
  * se podra elegir el tamaño de estas regiones
- * @param {int} El tamaño de las acasillas en la que sera divida la imagen
+ * @param {int} tam El tamaño de las acasillas en la que sera divida la imagen
  * @param {document} img Sera la informacion de la imgen  a modificar
  * @returns {undefined}
  */
