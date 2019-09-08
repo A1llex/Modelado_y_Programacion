@@ -4,14 +4,10 @@
  * La Finalidad de este programa es
  */
 
-//tambien comentario
-
-// aqui sera el main pero sera tambien el controlador
-
-
-alert("Hola mundo");
-
-let name = prompt("What is your name?");
+function controlador (arg1,arg2){
+    //Body
+    return arg1;
+};
 
 /* con esto puede obtener del html la imagen pero falta aun
  * document.getElementById("scream").onload = function() {
